@@ -38,6 +38,9 @@ public class MainActivity extends AppCompatActivity {
 
         new GetContacts().execute();
     }
+    void show(){
+
+    }
 
     /**
      * Async task class to get json by making HTTP call
@@ -128,6 +131,10 @@ public class MainActivity extends AppCompatActivity {
 
             return null;
         }
+        @Override
+        protected void onProgressUpdate(Void... values) {
+            super.onProgressUpdate(values);
+        }
 
         @Override
         protected void onPostExecute(Void result) {
@@ -168,6 +175,26 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(String s) {
             super.onPostExecute(s);
+        }
+    }
+
+    class Asyb extends AsyncTask<String,String,String>{
+
+        @Override
+        protected String doInBackground(String... strings) {
+            return null;
+        }
+
+        @Override
+        protected void onProgressUpdate(String... values) {
+            super.onProgressUpdate(values);
+
+
+        }
+
+        @Override
+        protected void onPostExecute(String aVoid) {
+            super.onPostExecute(aVoid);
         }
     }
 }

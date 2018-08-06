@@ -19,6 +19,7 @@ import android.widget.Toast;
  * @since 1.0
  */
 public class MyAsyncTask extends AsyncTask<Void, Integer,Void> {
+
     Activity contextParent;
     public MyAsyncTask(Activity contextParent) {
         this.contextParent = contextParent;
